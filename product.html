@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <title>Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Flower Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <center>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">About</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="product.html">Product</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="review.html">Review</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </li>
+       <li class="nav-item">
+       <a class="nav-link" href="cart.html"> Cart (<span id="cart-count">0</span>)</a>
+       </li>
+      </ul>
+      </center>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+  </div>
+</nav>
+
+
+
+<div class="flex-container">
+ <div>
+   <img src="./images/p1.jpg" width="250" height="250"> <br> Rs.1050 <br>
+   <button class="button add-btn" data-name="Birthday bouquet" data-price="950"><a href="cart.html" class="a"> Addcart </a></button>
+ </div>
+
+ <div>
+   <img src="./images/p4.webp" width="250" height="250"> <br> Rs.850 <br>
+   <button class="button add-btn" data-name="Colorful daily " data-price="850"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+
+ <div>
+   <img src="./images/p3.jpg" width="250" height="250"> <br> Rs.790 <br>
+   <button class="button add-btn" data-name="Rose bouquet" data-price="780"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+
+ <div>
+   <img src="./images/p2.webp" width="250" height="250"> <br> Rs.800 <br>
+   <button class="button add-btn" data-name="Pink rose" data-price="500"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+
+ <div>
+   <img src="./images/p5.webp" width="250" height="250"> <br> Rs.870 <br>
+   <button class="button add-btn" data-name=" bouquet" data-price="870"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+
+ <div>
+   <img src="./images/p6.jpg" width="250" height="250"> <br> Rs.980 <br>
+   <button class="button add-btn" data-name="Rose bouquet" data-price="980"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+
+ <div>
+   <img src="./images/p7.avif" width="250" height="250"> <br> Rs.860 <br>
+   <button class="button add-btn" data-name="Mixed samanthis" data-price="860"><a href="cart.html" class="a">Addcart</a>
+  </button>
+ </div>
+
+ <div>
+   <img src="./images/p8.jpg" width="250" height="250"> <br> Rs.870 <br>
+   <button class="button add-btn" data-name="wedding rose bouquet" data-price="850"><a href="cart.html" class="a">Addcart</a></button>
+ </div>
+</div>
+
+<script>
+  // Load cart from localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Update cart count in navbar
+  function updateCartCount() {
+    document.getElementById("cart-count").textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+  }
+
+  updateCartCount();
+
+  // Add to cart buttons
+  document.querySelectorAll(".add-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const name = button.getAttribute("data-name");
+      const price = parseInt(button.getAttribute("data-price"));
+
+      let existing = cart.find(item => item.name === name);
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(name + " added to cart!");
+      updateCartCount();
+    });
+  });
+</script>
+
+
+
+
+
+<footer class=" text-white text-center py-3" style="background-color: rgb(160, 138, 138);">
+  &copy; 2025 Flower Shop. All Rights Reserved.
+</footer>
+</body>
+</html>

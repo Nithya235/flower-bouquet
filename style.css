@@ -1,0 +1,209 @@
+ .flex-container{
+            display: flex;
+            flex-flow: wrap;
+           
+              
+        }
+        .flex-container>div{
+            padding: 2% 2% 2% 2%;
+            margin: 10px 10px 10px 10px;
+            text-align: center;
+            font-size: large;
+            background-color: white;
+        }
+        .button{
+            width: 100%;
+            background-color: rgb(165, 78, 93);
+            color: white;
+
+        }
+
+ .add-btn {
+  padding: 8px 15px;
+  background: brown;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.a{
+    text-decoration: none;
+    color: white;
+}
+        @media (max-width:968px) {
+           .flex-container{
+            display: flex;
+            flex-flow: wrap;
+            flex-basis: 35%;
+              
+        }
+        .flex-container>div{
+            padding: 2%;
+            margin: 10px;
+            text-align: center;
+            font-size: large;
+            background-color: white;
+        }
+        .button{
+            width: 100%;
+            background-color: rgb(165, 78, 93);
+            color: white;
+
+        }
+            
+        }
+
+
+
+
+
+
+       
+.contact-header {
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('images/contact-banner.jpg') center/cover no-repeat;
+}
+
+
+.info-box {
+    background: #fff;
+    transition: 0.3s ease-in-out;
+}
+.info-box:hover {
+    transform: translateY(-5px);
+    background: #f8f9fa;
+}
+
+
+form button {
+    background-color: #d63384;
+    border: none;
+}
+form button:hover {
+    background-color: #b3246d;
+}
+
+
+@media(max-width: 768px) {
+    .contact-header {
+        height: 30vh;
+        text-align: center;
+    }
+    form button {
+    background-color: #d63384;
+    border: none;
+}
+form button:hover {
+    background-color: #b3246d;
+}
+}
+
+
+
+/* Header Section */
+.review-header {
+    height: 35vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('images/review-banner.jpg') center/cover no-repeat;
+}
+
+/* Review Cards */
+.review-card {
+    background: #fff;
+    transition: 0.3s;
+}
+.review-card:hover {
+    transform: translateY(-6px);
+    background: #f8f9fa;
+}
+
+/* Stars */
+.stars {
+    color: #ffcc00;
+    font-size: 20px;
+}
+
+/* Form Button */
+form button {
+    background-color: #d63384;
+    border: none;
+}
+form button:hover {
+    background-color: #b3246d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .review-header {
+        height: 25vh;
+        text-align: center;
+    }
+    
+
+}
+
+
+.bouquet {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.bouquet img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.bouquet p {
+  width: 60%;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+  .bouquet {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bouquet img {
+    width: 70%;
+  }
+
+  .bouquet p {
+    width: 90%;
+    font-size: 17px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bouquet img {
+    width: 90%;
+  }
+
+  .bouquet p {
+    width: 95%;
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .bouquet img {
+    width: 100%;
+  }
+
+  .bouquet p {
+    font-size: 15px;
+    padding: 0 5px;
+  }
+}
+
+

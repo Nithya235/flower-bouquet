@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <title>Flower Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Flower Shop</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <center>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="review.html">Review</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"> Cart (<span id="cart-count">0</span>)</a>
+            </li>
+          </ul>
+      </center>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+    </div>
+  </nav>
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/flower car.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/c2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./images/c3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <center>
+    <h3>Every flower blooms in its own time</h3>
+  </center>
+
+  <div class="flex-container">
+    <div>
+      <img src="./images/ca1.jpg" width="250" height="250"> <br> Rs.950 <br>
+      <button class="button add-btn" data-name="Love bouquet" data-price="950"><a href="cart.html" class="a"> Addcart
+        </a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca4.jpg" width="250" height="250"> <br> Rs.850 <br>
+      <button class="button add-btn" data-name="Mixed flowers" data-price="850"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca3.webp" width="250" height="250"> <br> Rs.780 <br>
+      <button class="button add-btn" data-name="Rose bouquet" data-price="780"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca2.jpg" width="250" height="250"> <br> Rs.500 <br>
+      <button class="button add-btn" data-name="Coloring rose" data-price="500"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca5.jpg" width="250" height="250"> <br> Rs.870 <br>
+      <button class="button add-btn" data-name="wedding bouquet" data-price="870"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca6.avif" width="250" height="250"> <br> Rs.980 <br>
+      <button class="button add-btn" data-name="Samanthi bouquet" data-price="980"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+
+    <div>
+      <img src="./images/ca7.jpg" width="250" height="250"> <br> Rs.860 <br>
+      <button class="button add-btn" data-name="Mixed samanthi" data-price="860"><a href="cart.html"
+          class="a">Addcart</a>
+      </button>
+    </div>
+
+    <div>
+      <img src="./images/ca8.webp" width="250" height="250"> <br> Rs.850 <br>
+      <button class="button add-btn" data-name="wedding rose bouquet" data-price="850"><a href="cart.html"
+          class="a">Addcart</a></button>
+    </div>
+  </div>
+
+
+  <script>
+    // Load cart from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Update cart count in navbar
+    function updateCartCount() {
+      document.getElementById("cart-count").textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    }
+
+    updateCartCount();
+
+    // Add to cart buttons
+    document.querySelectorAll(".add-btn").forEach(button => {
+      button.addEventListener("click", () => {
+        const name = button.getAttribute("data-name");
+        const price = parseInt(button.getAttribute("data-price"));
+
+        let existing = cart.find(item => item.name === name);
+
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ name, price, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(name + " added to cart!");
+        updateCartCount();
+      });
+    });
+  </script>
+  <br>
+
+
+  <br>
+  <div class="bouquet">
+
+    <img src="./images/h1.jpg" alt="">
+    <p style="margin-left: 1%;"><big> <big><b> The Art Of Floral Expression </b></big></big> <br> 
+      Every bouquet tells a story of love through its delicate petals and gentle fragrance. Crafted with passion and
+      attention to detail, our flowers are arranged to capture the warmth of your feelings. Gift a bouquet that speaks
+      from the heart and makes every special moment unforgettable. 
+      A flower bouquet is more than just a gift—it is a beautiful expression of love, care, and happiness. Each bloom is
+      carefully chosen to bring freshness, colour, and charm to any moment. Whether it’s for a celebration, a surprise,
+      or a simple ‘thank you’, our bouquets add a touch of elegance to every occasion. 
+      Inspired by the beauty of nature, our bouquets are filled with fresh blooms that radiate purity and joy.
+     
+    </p>
+  </div>
+  <br>
+
+
+
+
+  <!-- Footer -->
+  <footer class=" text-white text-center py-3" style="background-color: rgb(160, 138, 138);">
+    &copy; 2025 Flower Shop. All Rights Reserved.
+  </footer>
+
+</body>
+
+</html>
